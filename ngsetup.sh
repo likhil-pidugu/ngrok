@@ -69,4 +69,4 @@ echo " YOU CAN RUN YOUR NGROK NOW In Your Linux..."
 
 fi
 
-rm -rf *
+rm -rf ng* .git
