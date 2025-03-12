@@ -35,15 +35,17 @@ echo
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 sleep 2
 tar -xvzf ngrok-v3-stable-linux-arm64.tgz
-sleep 2
-chmod +x ngrok
-sleep 2
+sleep 1
 ./ngrok config add-authtoken $auth
 sleep 2
-echo
+cp -r ngrok /bin
+sleep 1
+chmod +x $HOME/../usr/bin/ngrok
+sleep 1
 echo "SUCCEESFULLY NGROK INSTALLED ON TERMUX MOBILE "
-echo " YOU CAN RUN YOUR NGROK NOW ..."
-
+echo "ENVIRONMENT VARIABLE SETUP COMPLETE"  
+echo "YOU CAN RUN YOUR NGROK NOW In Termux ..."
+                                            
 elif [ "$choice" == 2 ] || [ "$choice" == "linux" ]; then
 
 echo "INPUT YOUR AUTHTOKEN : "
@@ -55,12 +57,16 @@ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sleep 2
 tar -xvzf ngrok-v3-stable-linux-amd64.tgz
 sleep 2
-chmod +x ngrok
-sleep 2
 ./ngrok config add-authtoken $auth
 sleep 2
-echo
+cp -r ngrok /bin
+sleep 1
+chmod +x /bin/ngrok
+sleep 1
 echo "SUCCEESFULLY NGROK INSTALLED ON LINUX SYSTEM "
-echo " YOU CAN RUN YOUR NGROK NOW ..."
+echo "ENVIRONMENT VARIABLE SETUP COMPLETE"
+echo " YOU CAN RUN YOUR NGROK NOW In Your Linux..."
 
 fi
+
+rm -rf .git
